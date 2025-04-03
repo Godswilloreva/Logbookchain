@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdraw Funds</title>
+    <style>
+        body {
+            background: #0e0e0e;
+            color: #0ff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 15px #0ff;
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-size: 30px;
+            color: #ff00ff;
+        }
+        input, select {
+            width: 80%;
+            padding: 10px;
+            margin: 15px 0;
+            background: #1e1e1e;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            box-shadow: 0 0 10px #0ff;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border: 2px solid #ff00ff;
+        }
+        button {
+            padding: 15px 25px;
+            font-size: 18px;
+            background: #ff00ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 0 15px #ff00ff;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #ff0099;
+            box-shadow: 0 0 20px #ff0099;
+        }
+        .spinner {
+            display: none;
+            margin: 20px auto;
+            width: 30px;
+            height: 30px;
+            border: 5px solid #0ff;
+            border-top: 5px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        .message {
+            margin-top: 20px;
+            color: red;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <script>
+        function withdrawFunds(button) {
+            let spinner = button.nextElementSibling;
+            let message = document.querySelector(".message");
+            
+            spinner.style.display = 'block'; // Show spinner
+            setTimeout(() => {
+                spinner.style.display = 'none'; // Hide spinner
+                message.textContent = "You don't have any funds to withdraw. Please add funds first."; // Show error message
+            }, 30000);
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Withdraw Funds</h2>
+
+        <!-- Amount to Withdraw -->
+        <input type="number" placeholder="Amount to Withdraw" id="amountToWithdraw" />
+
+        <!-- Address to Withdraw To -->
+        <input type="text" placeholder="Withdrawal Address" id="withdrawAddress" />
+
+        <!-- Cryptocurrency Dropdown -->
+        <select id="cryptoDropdown">
+            <option value="Bitcoin">Bitcoin</option>
+            <option value="USDT TRC20">USDT TRC20</option>
+            <option value="USDT BEP20">USDT BEP20</option>
+            <option value="TRON">TRON</option>
+            <option value="Ethereum">Ethereum</option>
+            <option value="Litecoin">Litecoin</option>
+            <option value="Ripple">Ripple</option>
+            <option value="Bitcoin Cash">Bitcoin Cash</option>
+            <option value="Dogecoin">Dogecoin</option>
+            <option value="Cardano">Cardano</option>
+        </select>
+
+        <!-- Network Dropdown -->
+        <select id="networkDropdown">
+            <option value="TRC 20 Network">TRC 20 Network</option>
+            <option value="BEP 20 Network">BEP 20 Network</option>
+            <option value="ERC 20 Network">ERC 20 Network</option>
+            <option value="Other Network">Other Network</option>
+        </select>
+
+        <!-- Withdraw Button -->
+        <button onclick="withdrawFunds(this)">Withdraw</button>
+        <div class="spinner"></div>
+
+        <div class="message"></div>
+    </div>
+
+</body>
+</html>

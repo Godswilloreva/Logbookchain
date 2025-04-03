@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Balance</title>
+    <style>
+        body {
+            background: black;
+            color: #0ff;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .payment-container {
+            margin: 20px auto;
+            width: 90%;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 15px #0ff;
+        }
+        .btn {
+            background: #ff00ff;
+            color: white;
+            padding: 10px;
+            border: none;
+            margin: 10px;
+            width: 200px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #ff00ff;
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .btn:hover {
+            box-shadow: 0 0 20px #ff00ff;
+        }
+        .spinner {
+            display: none;
+            margin: 10px auto;
+            width: 30px;
+            height: 30px;
+            border: 5px solid #0ff;
+            border-top: 5px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <script>
+        function processPayment(button) {
+            let spinner = button.nextElementSibling;
+            let message = button.nextElementSibling.nextElementSibling;
+            
+            spinner.style.display = 'block';
+            setTimeout(() => {
+                spinner.style.display = 'none';
+                message.textContent = "Payment not confirmed. Please make a payment.";
+            }, 30000);
+        }
+    </script>
+</head>
+<body>
+    <div class="payment-container">
+        <h2>Pay with Bitcoin</h2>
+        <p>3BfoU2qv6ytuAb6XFQGxwUBUJETaV75hEi</p>
+        <button class="btn" onclick="processPayment(this)">I Have Paid</button>
+        <div class="spinner"></div>
+        <p></p>
+    </div>
+    
+    <div class="payment-container">
+        <h2>Pay with USDT (TRC20 Network)</h2>
+        <p>TB4YyUMmFV8NK1GqZyWkENNPAkPbDf7sCv</p>
+        <button class="btn" onclick="processPayment(this)">I Have Paid</button>
+        <div class="spinner"></div>
+        <p></p>
+    </div>
+    
+    <div class="payment-container">
+        <h2>Pay with USDT (BEP20 Network)</h2>
+        <p>0x272691b6300a719fd1d8e7524f4c28fade078243</p>
+        <button class="btn" onclick="processPayment(this)">I Have Paid</button>
+        <div class="spinner"></div>
+        <p></p>
+    </div>
+    
+    <div class="payment-container">
+        <h2>Pay with TRON (TRC20 Network)</h2>
+        <p>TB4YyUMmFV8NK1GqZyWkENNPAkPbDf7sCv</p>
+        <button class="btn" onclick="processPayment(this)">I Have Paid</button>
+        <div class="spinner"></div>
+        <p></p>
+    </div>
+    
+    <div class="payment-container">
+        <h2>Pay with Ethereum (ERC20 Network)</h2>
+        <p>0x272691b6300a719fd1d8e7524f4c28fade078243</p>
+        <button class="btn" onclick="processPayment(this)">I Have Paid</button>
+        <div class="spinner"></div>
+        <p></p>
+    </div>
+</body>
+</html>

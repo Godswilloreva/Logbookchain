@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Logs</title>
+    <style>
+        body {
+            background: black;
+            color: #0ff;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .container {
+            padding: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        h1 {
+            font-size: 28px;
+            text-shadow: 0 0 10px #0ff;
+            animation: glow 1.5s infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 5px #0ff; }
+            to { text-shadow: 0 0 20px #0ff; }
+        }
+        marquee {
+            font-size: 18px;
+            color: #ff0;
+            text-shadow: 0 0 5px #ff0;
+            font-weight: bold;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ff00ff;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #ff00ff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px #ff00ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bank Logs Store</h1>
+        <marquee>🔥 Get the Best Bank Logs Here! 🔥</marquee>
+        <p>Welcome to the most exclusive bank log market. Sign up now to access premium logs!</p>
+        <div class="buttons">
+            <a href="sign-up.html" class="btn">Sign Up</a>
+            <a href="sign-in.html" class="btn">Sign In</a>
+        </div>
+    </div>
+</body>
+</html>

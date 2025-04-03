@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History of Bought Logs</title>
+    <style>
+        body {
+            background: #121212;
+            color: #0ff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 15px #0ff;
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #ff00ff;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        th, td {
+            padding: 8px;
+            border: 1px solid #ff00ff;
+            text-align: left;
+            color: #fff;
+        }
+        th {
+            background-color: #1a1a1a;
+            font-size: 16px;
+        }
+        tr:nth-child(even) {
+            background-color: #2a2a2a;
+        }
+        tr:hover {
+            background-color: #333;
+            cursor: pointer;
+        }
+        .crypto-address,
+        .log-delivered {
+            color: #00ff00;
+        }
+        .name {
+            color: #ff00ff;
+            font-weight: bold;
+        }
+        .pagination {
+            margin-top: 20px;
+        }
+        .pagination a {
+            color: #0ff;
+            padding: 8px 12px;
+            margin: 0 5px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .pagination a:hover {
+            background-color: #ff00ff;
+            color: #121212;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>History of Bought Logs</h2>
+
+        <!-- Table of Purchased Logs -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Crypto Address</th>
+                    <th>Log Delivered</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="name">Chidi Okafor</td>
+                    <td class="crypto-address">Bitcoin Address: 3BfoU2qv6ytuAb6XFQGxwUBUJETaV75hEi</td>
+                    <td class="log-delivered">Bank of America</td>
+                </tr>
+                <tr>
+                    <td class="name">Amina Bello</td>
+                    <td class="crypto-address">USDT TRC20: TB4YyUMmFV8NK1GqZyWkENNPAkPbDf7sCv</td>
+                    <td class="log-delivered">Shopwithscript</td>
+                </tr>
+                <tr>
+                    <td class="name">Kofi Mensah</td>
+                    <td class="crypto-address">TRON Address: TB4YyUMmFV8NK1GqZyWkENNPAkPbDf7sCv</td>
+                    <td class="log-delivered">Leads</td>
+                </tr>
+                <tr>
+                    <td class="name">Lindiwe Nkosi</td>
+                    <td class="crypto-address">Ethereum Address: 0x272691b6300a719fd1d8e7524f4c28fade078243</td>
+                    <td class="log-delivered">Canada</td>
+                </tr>
+                <tr>
+                    <td class="name">Michael Wilson</td>
+                    <td class="crypto-address">Bitcoin Address: 1QvJgbdVnA5zZ1UsKdA5Dh57yW1CvFUfd2f</td>
+                    <td class="log-delivered">Wells Fargo</td>
+                </tr>
+                <tr>
+                    <td class="name">Ngozi Nwachukwu</td>
+                    <td class="crypto-address">TRX Address: 9cM7xDfM8VuwWydX9p5ZjZc9V7sZyABRdd</td>
+                    <td class="log-delivered">Bank of America</td>
+                </tr>
+                <tr>
+                    <td class="name">Kwame Osei</td>
+                    <td class="crypto-address">USDT TRC20: TX9U34VmzFjzQ2cMcFyksmf6s7p4sbf7qa</td>
+                    <td class="log-delivered">Shopwithscript</td>
+                </tr>
+                <tr>
+                    <td class="name">Fatou Bensouda</td>
+                    <td class="crypto-address">BTC Address: 1ZySxFd27Xy2LaYhbbxqQWJTZ4mrDZjzJK5</td>
+                    <td class="log-delivered">Leads</td>
+                </tr>
+                <tr>
+                    <td class="name">Sarah Okoye</td>
+                    <td class="crypto-address">TRON Address: 7n6RtxAf5cVpMNGrZGwpv3uh8E4ZfbA1zA</td>
+                    <td class="log-delivered">Canada</td>
+                </tr>
+                <tr>
+                    <td class="name">Musa Abubakar</td>
+                    <td class="crypto-address">ETH Address: 0xC3d18A2e82Ff2a0dA022Af206F9Bf7B0db8</td>
+                    <td class="log-delivered">Wells Fargo</td>
+                </tr>
+                <tr>
+                    <td class="name">Babatunde Alabi</td>
+                    <td class="crypto-address">USDT BEP20: 0x37Fa289572BeF6cB3DAF22F8B8dF49D33b</td>
+                    <td class="log-delivered">Bank of America</td>
+                </tr>
+                <tr>
+                    <td class="name">Abdul Farouk</td>
+                    <td class="crypto-address">TRX Address: 8VpX5e8sV5d9gGJKr4jhxzjkwkq4QsMrFZ</td>
+                    <td class="log-delivered">Shopwithscript</td>
+                </tr>
+                <tr>
+                    <td class="name">Sade Akinwunmi</td>
+                    <td class="crypto-address">BTC Address: 1HxfneZ9hfMbqB2M2HqjjH8xH7eAe8Qrk3</td>
+                    <td class="log-delivered">Leads</td>
+                </tr>
+                <tr>
+                    <td class="name">Ibrahim Eze</td>
+                    <td class="crypto-address">ETH Address: 0xd916Ff2D2353b5F76E6aE5F432A177Af2F</td>
+                    <td class="log-delivered">Canada</td>
+                </tr>
+                <tr>
+                    <td class="name">Tariq Okafor</td>
+                    <td class="crypto-address">USDT TRC20: TYv54ZUwD7nG4y6r9PdHLf6w5GRXG7rf17</td>
+                    <td class="log-delivered">Wells Fargo</td>
+                </tr>
+                <tr>
+                    <td class="name">Sarah Kinteh</td>
+                    <td class="crypto-address">Bitcoin Address: 3vW32KjY5V4wPqp8Sh9a3mjW1R7dh8Yh41</td>
+                    <td class="log-delivered">Bank of America</td>
+                </tr>
+                <tr>
+                    <td class="name">Femi Abiola</td>
+                    <td class="crypto-address">ETH Address: 0x77F68b06090d5E63f3482aF120d21d0A29f</td>
+                    <td class="log-delivered">Shopwithscript</td>
+                </tr>
+                <tr>
+                    <td class="name">Ayodele Olamide</td>
+                    <td class="crypto-address">TRC20 Address: TP2z8c5kj6yGd1r13bvs5tUPgq9uRgggJz</td>
+                    <td class="log-delivered">Leads</td>
+                </tr>
+                <tr>
+                    <td class="name">Olumide Adebanjo</td>
+                    <td class="crypto-address">USDT BEP20: 0xa57bD26e0D8F9b0a7420b61B8B94C490B6</td>
+                    <td class="log-delivered">Canada</td>
+                </tr>
+                <tr>
+                    <td class="name">Kwesi Owusu</td>
+                    <td class="crypto-address">TRX Address: 7hC1xk2bHTnVqkhQysVXf7ZYGeq7JAtqk9</td>
+                    <td class="log-delivered">Wells Fargo</td>
+                </tr>
+                <!-- Add additional rows here up to 30 -->
+            </tbody>
+        </table>
+
+        <!-- Pagination Links -->
+        <div class="pagination">
+            <a href="#1">1</a>
+            <a href="#2">2</a>
+            <a href="#3">3</a>
+            <a href="#4">4</a>
+            <a href="#5">5</a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        body {
+            background: black;
+            color: #0ff;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .form-container {
+            max-width: 300px;
+            margin: 50px auto;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #0ff;
+        }
+        h2 {
+            text-shadow: 0 0 10px #0ff;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        .btn {
+            background: #ff00ff;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #ff00ff;
+            cursor: pointer;
+        }
+        .btn:hover {
+            box-shadow: 0 0 20px #ff00ff;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+        .verification-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .verification-code {
+            background: #222;
+            padding: 10px;
+            color: #ff0;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #ff0;
+        }
+    </style>
+    <script>
+        function generateVerificationCode() {
+            return Math.floor(1000 + Math.random() * 9000);
+        }
+        function updateVerificationCode() {
+            document.getElementById("verification-code").textContent = generateVerificationCode();
+        }
+        function validateForm() {
+            let valid = true;
+            let verificationCode = document.getElementById("verification-code").textContent;
+            let enteredCode = document.getElementById("verification").value;
+            
+            if (enteredCode !== verificationCode) {
+                document.getElementById("verification_error").textContent = "Error: Incorrect verification code";
+                valid = false;
+            } else {
+                document.getElementById("verification_error").textContent = "";
+            }
+            
+            return valid;
+        }
+        
+        window.onload = function() {
+            updateVerificationCode();
+            setInterval(updateVerificationCode, 10000);
+        }
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Kindly Sign In</h2>
+        <form onsubmit="return validateForm()" action="dashboard-logs.html">
+            <input type="text" id="username" placeholder="Username" required><br>
+            <input type="password" id="password" placeholder="Password" required><br>
+            <div class="verification-box">
+                <span id="verification-code" class="verification-code"></span>
+                <input type="text" id="verification" placeholder="Enter Verification Code" required>
+            </div>
+            <span class="error" id="verification_error"></span><br>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
